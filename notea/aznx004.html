@@ -1,0 +1,112 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>wmcsg</title><meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0"><link rel="stylesheet" href="css/bijiye.css"><style></style></head><body><div class="no1"><div class="no2">🌸</div><div class="txtbt">NoteA</div><div class="no3"><a href="index.html"><div class="no2">=》</div></a></div><!--no3--></div><!--no1--><div class="no4"></div>
+<!--内容的开始-->
+<div class="no5" contenteditable="true">
+〖页面介绍〗手动添加smali基础颜色弹窗<br/>
+---------<br/>
+【教程前言】<br/>
+找到应用的第一个activity活动主程序入口，（当然你也可以插入其他的activity活动入口里）在他的onCreate方法（method public onCreate ****)下添加弹窗代码。复制下面任意一种调用代码粘贴进去，然后保存即可。（记得注意空格！！！！！！）<br/>
+<br/>
+【弹窗代码】<br/>
+1，Toast弹窗（颜色弹窗）<br/>
+const-string v0, "< font color=\"#00ccc0\">测试< /font>"<br/>
+<br/>
+invoke-static {v0}, Landroid/text/Html;->fromHtml(Ljava/lang/String;)Landroid/text/Spanned;<br/>
+<br/>
+move-result-object v0<br/>
+<br/>
+const/4 v1, 0x1<br/>
+<br/>
+invoke-static {p0, v0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;<br/>
+<br/>
+move-result-object v0<br/>
+<br/>
+invoke-virtual {v0}, Landroid/widget/Toast;->show()V<br/>
+~~~~~~~~~<br/>
+2，仅内容（颜色弹窗）<br/>
+new-instance v0, Landroid/app/AlertDialog$Builder;<br/>
+<br/>
+invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;->< init>(Landroid/content/Context;)V<br/>
+<br/>
+const-string v1, "< font color=\"#666666\">这是弹窗内容< /font>"<br/>
+<br/>
+invoke-static {v1}, Landroid/text/Html;->fromHtml(Ljava/lang/String;)Landroid/text/Spanned;<br/>
+<br/>
+move-result-object v1<br/>
+<br/>
+invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;<br/>
+<br/>
+move-result-object v0<br/>
+<br/>
+invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;<br/>
+~~~~~~~~~<br/>
+<br/>
+3，标题+内容（颜色弹窗）<br/>
+new-instance v0, Landroid/app/AlertDialog$Builder;<br/>
+<br/>
+invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;->< init>(Landroid/content/Context;)V<br/>
+<br/>
+const-string v1, "< b>< font color=\"#666666\">这是弹窗标题< /font>< /b>"<br/>
+<br/>
+invoke-static {v1}, Landroid/text/Html;->fromHtml(Ljava/lang/String;)Landroid/text/Spanned;<br/>
+<br/>
+move-result-object v1<br/>
+<br/>
+invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;<br/>
+<br/>
+move-result-object v0<br/>
+<br/>
+const-string v1, "< b>< font color=\"#666666\">这是弹窗内容< /font>< /b>"<br/>
+<br/>
+invoke-static {v1}, Landroid/text/Html;->fromHtml(Ljava/lang/String;)Landroid/text/Spanned;<br/>
+<br/>
+move-result-object v1<br/>
+<br/>
+invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;<br/>
+<br/>
+move-result-object v0<br/>
+<br/>
+invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;<br/>
+~~~~~~~~~<br/>
+<br/>
+4，标题+内容+按钮x1（全颜色）<br/>
+new-instance v0, Landroid/app/AlertDialog$Builder;<br/>
+<br/>
+invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;->< init>(Landroid/content/Context;)V<br/>
+<br/>
+const-string v1, "< b>< font color=\"#666666\">这是弹窗标题< /font>< /b>"<br/>
+<br/>
+invoke-static {v1}, Landroid/text/Html;->fromHtml(Ljava/lang/String;)Landroid/text/Spanned;<br/>
+<br/>
+move-result-object v1<br/>
+<br/>
+invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;<br/>
+<br/>
+move-result-object v0<br/>
+<br/>
+const-string v1, "< b>< font color=\"#666666\">这是弹窗内容< /font>< /b>"<br/>
+<br/>
+invoke-static {v1}, Landroid/text/Html;->fromHtml(Ljava/lang/String;)Landroid/text/Spanned;<br/>
+<br/>
+move-result-object v1<br/>
+<br/>
+invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;<br/>
+<br/>
+move-result-object v0<br/>
+<br/>
+const-string v1, "< font color=\"#00ccc0\">这是弹窗按钮< /font>"<br/>
+<br/>
+invoke-static {v1}, Landroid/text/Html;->fromHtml(Ljava/lang/String;)Landroid/text/Spanned;<br/>
+<br/>
+move-result-object v1<br/>
+<br/>
+const/4 v2, 0x0<br/>
+<br/>
+invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;<br/>
+<br/>
+move-result-object v0<br/>
+<br/>
+invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;<br/>
+<br/>
+</div><!--no5-->
+<!--内容的结束-->
+<div class="no6"></div></body><script type="text/javascript"></script></html>
