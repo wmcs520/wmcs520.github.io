@@ -1,0 +1,42 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>wmcsg</title><meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0"><link rel="stylesheet" href="css/bijiye.css"><style></style></head><body><div class="no1"><div class="no2">🌸</div><div class="txtbt">NoteA</div><div class="no3"><a href="index.html"><div class="no2">=》</div></a></div><!--no3--></div><!--no1--><div class="no4"></div>
+<!--内容的开始-->
+<div class="no5" contenteditable="true">
+〖001 - 教程介绍〗安卓逆向教程之去云注入教程，下面方法新版云注入和旧版云注入通用。<br/>
+~~~~~~~~~~~~~~~<br/>
+【教程前言】<br/>
+1，首先区分新/旧云注入<br/>
+2，区分方法<br/>
+#新版：请认准assets目录下的25.11k大小的文件<br/>
+#旧版：请认准assets目录下文件名为cloudinject的文件<br/>
+#加注：新版不看文件名<br/>
+<br/>
+【教程正文】<br/>
+1，点击.dex文件〔全选〕<br/>
+2，搜索方法名∶getshowtype<br/>
+注意：如果有多个getshowtype，请认准com.cloudinject.feature.model包下的getshowtype，没有多个getshowtype则忽略<br/>
+3，请认准getshowtype方法名下invoke开头的代码<br/>
+4，然后把它注释掉〔在invoke前加“#”号〕<br/>
+<br/><br/><br/><br/><br/>
+〖002 - 教程介绍〗去安卓SKY小肝游戏的实名认证<br/>
+~~~~~~~~~~~~~~~<br/>
+【逆向工具】<br/>
+#所需工具说明∶只要能逆向修改apk软件包的工具就行，比如MT管理器，NP管理器等等...<br/>
+<br/>
+【教程正文】<br/>
+1，打开逆向工具<br/>
+2，找到程序主入口<br/>
+3，打开AndroidManifest.xml文件<br/>
+4，把程序主入口替换成com.cocos.game.AppActivity就行了<br/>
+<br/><br/><br/><br/><br/>
+〖003 - 教程介绍〗安卓逆向教程之去除好游快爆实名认证教程。仅限修改单机游戏。<br/>
+~~~~~~~~~~~~~~~<br/>
+【教程正文】<br/>
+1，点击.dex文件〔全选〕<br/>
+2，搜索方法名∶initsdk<br/>
+3，搜索的路径中包含"3839"字眼的类名<br/>
+4，在里面类名里面找到initsdk方法名<br/>
+5，然后清空initsdk方法名即可（在方法名第一句加上return-void，或者清空这个方法名都可以）<br/>
+<br/>
+</div><!--no5-->
+<!--内容的结束-->
+<div class="no6"></div></body><script type="text/javascript"></script></html>
