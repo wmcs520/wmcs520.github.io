@@ -1,0 +1,316 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'>
+<meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+<title>资源分享屋</title>
+<style>
+/*主布局*/
+*{padding:0;margin:0;}
+body{outline:none;background-color:#eee;font-family:serif;}
+div{-webkit-tap-highlight-color:rgba(0,0,0,0); }
+a{color:#333;-webkit-tap-highlight-color:rgba(0,0,0,0);border:none;outline:none;text-decoration:none;font-size:18px;}a:focus{outline:none; }
+@keyframes move{from{transform: rotate(0deg); }
+to{transform: rotate(360deg); }}
+/*移动端*/
+.yd_bj{display:none;}
+.yd_cnm{width:100%;height:100%;position:fixed;margin:auto;}
+.yd_bt{width:100%;height:8%;background-color:#fff;text-align:center;display:flex;align-items:center;font-weight:bold;color:#333;box-shadow: 0px 1px 2px #333;}
+.yd_h2{margin-right:15px;}
+.yd_h2:active{color:red;}
+.yd_nr{width:100%;height:92%;display:flex;}
+.yd_lb{width:50%;height:100%;overflow:auto;}
+.yd_lb::-webkit-scrollbar-track {background-color:#fff;}
+.yd_lb::-webkit-scrollbar {width:0px;}
+.yd_lb::-webkit-scrollbar-thumb {background-color: #ddd;border-radius:0;}
+.yd_lbjgxs{width:50%;height:100%;overflow:auto;padding:5px;}
+.yd_lbnr{border: solid 2px #ddd;margin:8px;border-radius:2px;padding:5px;text-align:center;font-size:15px;color:#666;font-weight:bold;background-color:#fff;box-shadow: 0px 1px 2px #333;}
+.yd_lbnr:active{border-radius:2px;border: solid 2px #aaa;padding:5px;text-align:center;font-size:15px;color:#ccc;}
+.yd_img{height:30%;box-shadow: 0px 1px 2px #333;border: solid 2px #ddd;border-radius:5px;margin:2%;}
+.yd_img img{width:100%;height:100%;border-radius:3px;}
+.yd_lbnrxsjg{width:100%;height:100%;display:flex;flex-direction:column;}
+.yd_img2{height:63%;box-shadow: 0px 1px 2px #333;border: solid 2px #ddd;border-radius:5px;margin:2%;padding:5px;overflow:auto;background-color:#fff;color:#555;}
+.yd_img2::-webkit-scrollbar-track {background-color:#fff;}
+.yd_img2::-webkit-scrollbar {width:0px;}
+.yd_img2::-webkit-scrollbar-thumb {background-color: #ddd;border-radius:0;}
+.bt_img{width:88px;height:100%;border-radius:3px;
+display:flex;align-items:center;justify-content:center;}
+.bt_img img{width:35px;height:35px;border-radius:100px;border: solid 2px #ddd;box-shadow: 0px 1px 2px #333;animation: move 1000ms infinite;}
+
+
+
+/*PC端*/
+.pc_bj{display:none;}
+.pc_cnm{width:100%;height:100%;position:fixed;margin:auto;}
+.pc_bt{width:100%;height:7%;background-color:#fff;text-align:center;display:flex;align-items:center;font-weight:bold;color:#333;box-shadow: 0px 1px 2px #333;}
+.pc_h2{margin-right:15px;}
+.pc_h2:active{color:red;}
+.pc_nr{width:100%;height:93%;display:flex;}
+.pc_lb{width:50%;height:100%;overflow:auto;}
+.pc_lb::-webkit-scrollbar-track {background-color:#fff;}
+.pc_lb::-webkit-scrollbar {width:0px;}
+.pc_lb::-webkit-scrollbar-thumb {background-color: #ddd;border-radius:0;}
+.pc_lbjgxs{width:50%;height:100%;overflow:auto;padding:5px;display:flex;flex-direction:column;}
+.pc_lbnr{border: solid 2px #ddd;margin:8px;border-radius:2px;padding:5px;text-align:center;font-size:15px;color:#666;font-weight:bold;background-color:#fff;box-shadow: 0px 1px 2px #333;}
+.pc_lbnr:active{border-radius:2px;border: solid 2px #aaa;padding:5px;text-align:center;font-size:15px;color:#ccc;}
+.pc_img{height:26%;box-shadow: 0px 1px 2px #333;border: solid 2px #ddd;border-radius:5px;margin:2%;background-color:#fff;color:#333;}
+.pc_img img{width:100%;height:100%;border-radius:3px;}
+.pc_lbnrxsjg{width:100%;height:100%;display:flex;flex-direction:column;}
+.pc_hljg{height:20%;border-radius:3px;background-color:#fff;color:#333;margin:2%;box-shadow: 0px 1px 2px #333;border: solid 2px #ddd;border-radius:5px;text-align:center;display:flex;align-items:center;justify-content:center;font-size:45px;font-weight:bold;}
+.pc_img2{height:48%;box-shadow: 0px 1px 2px #333;border: solid 2px #ddd;border-radius:5px;margin:2%;padding:5px;overflow:auto;background-color:#fff;color:#333;}
+.pc_img2::-webkit-scrollbar-track {background-color:#fff;}
+.pc_img2::-webkit-scrollbar {width:0px;}
+.pc_img2::-webkit-scrollbar-thumb {background-color: #ddd;border-radius:0;}
+.bt_img{width:88px;height:100%;border-radius:3px;
+display:flex;align-items:center;justify-content:center;}
+.bt_img img{width:35px;height:35px;border-radius:100px;border: solid 2px #ddd;box-shadow: 0px 1px 2px #333;animation: move 1000ms infinite;}
+.pc_img3{height:30%;box-shadow: 0px 1px 2px #333;border: solid 2px #ddd;border-radius:5px;margin:1%;background-color:#fff;color:#333;}
+.pc_img3 img{width:100%;height:100%;border-radius:3px;}
+.pc_img4{height:19%;box-shadow: 0px 1px 2px #333;border: solid 2px #ccc;border-radius:5px;margin:2%;padding:5px;overflow:auto;background-color:#fff;color:#333;text-align:center;display:flex;align-items:center;justify-content:center;font-size:45px;font-weight:bold;}
+.pc_img4_text{background-image:-webkit-linear-gradient(right,#E00000,#E0A000,#0055E7);-webkit-background-clip:text; -webkit-text-fill-color:transparent;}
+.time{border-bottom:2px dashed #999;background-image:-webkit-linear-gradient(left,#00A41B,#B400AB,#00CFC4);-webkit-background-clip:text; -webkit-text-fill-color:transparent;}
+</style>
+</head><body>
+<!--移动端开始--><div id="ydbj" class="yd_bj"><div class="yd_cnm">
+<div class="yd_bt">
+<div class="bt_img"><img  src="http://q1.qlogo.cn/g?b=qq&nk=1991271828&s=640&t"/></div>
+<div class="yd_h2" onclick="yd_lb();">主页</div>
+<div class="yd_h2" onclick="yd_lb_lzy();">蓝奏</div>
+<div class="yd_h2" onclick="yd_lb_s();">绅士</div>
+</div>
+<div style="width:100%;height:2px;background-color:#ccc;"></div>
+<div class="yd_nr">
+<div class="yd_lb" id="ydlb"></div>
+<div class="yd_lbjgxs" id="yd_lbjg">
+
+<div class="yd_lbnrxsjg">
+<div class="yd_img">
+<img src="http://shp.qpic.cn/collector/1991271828/e656f970-fe83-4d82-8daa-936b9f70bb1f/0"/></div>
+<div class="yd_img2" id="yd_xjs">隐私政策</div>
+</div>
+
+</div></div>
+</div></div><!--移动端结束-->
+
+
+
+<!--PC端开始--><div id="pcbj" class="pc_bj"><div class="yd_cnm">
+<div class="pc_bt">
+<div class="bt_img"><img  src="http://q1.qlogo.cn/g?b=qq&nk=1991271828&s=640&t"/></div>
+<div class="pc_h2" onclick="pc_lb();">主页</div>
+<div class="pc_h2" onclick="pc_lb_lzy();">蓝奏</div>
+<div class="yd_h2" onclick="pc_lb_s();">绅士</div>
+</div>
+<div style="width:100%;height:2px;background-color:#ccc;"></div>
+<div class="pc_nr">
+<div class="pc_lb" id="pclb"></div>
+
+<div class="pc_lbjgxs" id="pc_lbjg">
+<div class="pc_lbnrxsjg">
+<div class="pc_img">
+<img src="http://shp.qpic.cn/collector/1991271828/e656f970-fe83-4d82-8daa-936b9f70bb1f/0"/></div>
+<div class="pc_hljg"><div class="pc_img4_text">USER NAME<br/>WMCSG</div></div>
+<div class="pc_img2" id="pc_xjs">隐私政策</div>
+</div></div>
+
+<div class="pc_lbjgxs">
+<div class="pc_lbnrxsjg">
+<div class="pc_img3">
+<img src="https://img.xjh.me/random_img.php?return=302&1"/></div>
+<div class="pc_img3">
+<img src="https://img.xjh.me/random_img.php?return=302&2"/></div>
+<div class="pc_img3">
+<img src="https://img.xjh.me/random_img.php?return=302&3"/></div>
+</div></div>
+
+</div>
+</div></div><!--PC端结束-->
+</body>
+<script type='text/javascript'>
+//蓝奏云列表
+var ht_lzy=[
+["〖孤煞软件库〗","蓝奏云","https://wwm.lanzoub.com/b04q42b1e/"],
+["〖无名资源〗密码：6666","蓝奏云","https://wwd.lanpv.com/b01xvz36f"],
+["〖大肥软件库〗","蓝奏云","https://pan.lanzoup.com/u/qianxun8"],
+["〖苏念资源库〗","蓝奏云","https://shu-1.lanzoul.com/s/ShuNIan"],
+["〖蜗牛资源〗","蓝奏云","https://www.lanzoub.com/s/wdwefffrg/"],
+["〖神话资源库〗","蓝奏云","https://lanzoui.com/u/%E2%98%9E%E5%93%A5%E5%93%A5%E2%98%9C"],
+["〖兜兜软件〗","蓝奏云","https://www.lanzoub.com/b133841/"],
+["〖实用软件库〗","蓝奏云","https://icic0604.lanzouk.com/b0dzi97jc"],
+["〖Bbjs分享屋〗","蓝奏云","https://www.lanzoui.com/b053xt4vg/"],
+["〖小G资源库〗","蓝奏云","https://www.lanzoub.com/b0epegxzi/"],
+["〖小晨软件合集〗","蓝奏云","https://wwxl.lanzoul.com/s/ccdd"],
+["〖爱分享〗","蓝奏云","https://www.lanzoui.com/b325470"],
+["〖无名软件库〗","蓝奏云","https://lanzoui.com/u/rjk"],
+["〖暖分享〗","蓝奏云","https://nuan.lanzoux.com/b017y3zqh"],
+["〖资源鼠〗","蓝奏云","https://zys.lanzoui.com/s/zym"],
+["〖Viper资源网〗","蓝奏云","https://bhvip.lanzoux.com/u/%E5%BD%AA%E7%85%8CQQ1846055318"],
+["〖智仙的大裤子〗","蓝奏云","https://zhixianziyuan.lanzoui.com/b01hn5t8j"],
+["〖奇怪的分享〗","蓝奏云","https://www.lanzoui.com/b01b01h9a"],
+["〖分享轩〗","蓝奏云","https://pan.lanzoui.com/b63771/"],
+["〖软件实验室〗","蓝奏云","https://pan.lanzoui.com/u/ygtq"],
+["〖小轩VIP软件合集〗","蓝奏云","https://www.lanzoui.com/b76826"],
+
+["〖chudali资源站〗","蓝奏云","https://www.lanzoux.com/u/chudali"],
+["〖游戏修改基地〗","蓝奏云","https://pan.lanzoui.com/b888887"],
+["〖黑科技玩机〗","蓝奏云","https://www.lanzoub.com/b281858/"],
+["〖月亮软件库〗","蓝奏云","https://www.lanzoub.com/b06bcdu3g/"],
+["〖小说漫画库〗","蓝奏云","https://fengshenx.lanzouf.com/b0evapm4h"],
+["〖00资源库〗","蓝奏云","https://qiums.lanzoux.com/b0ctbqy5i"],
+["〖yoyodadada库〗","蓝奏云","https://www.lanzoux.com/u/yoyodadada"],
+["〖无名工具库〗","蓝奏云","https://www.lanzouw.com/b020o05vi?w1"],
+["〖小默资源库〗","蓝奏云","https://pan.lanzoui.com/b828085"],
+["〖百万软件库〗","蓝奏云","https://rjl6.lanzouy.com/s/bwk"],
+["〖巅峰-南泽软件库〗","蓝奏云","https://nanze.lanzouq.com/s/nanze"],
+["〖影视软件库〗","蓝奏云","https://fengshenx.lanzouf.com/b0evapjte"],
+["〖小高软件基地〗","蓝奏云","https://xiaogao.lanzoum.com/b0cvspe2d"],
+["〖苏轩软件库〗","蓝奏云","https://suxuan.lanzouf.com/u/A%E8%8B%8F%E8%BD%A9"],
+["〖霖淘购网库〗","蓝奏云","https://www.lanzoui.com/b252370"],
+["〖软件修改基地〗","蓝奏云","https://www.lanzoui.com/b0c8d2te"],
+["〖应用猫〗","蓝奏云","https://rjty6.lanzouo.com/b05sncrsj"],
+["〖小葵资源库〗","蓝奏云","https://xk6.lanzouw.com/s/zxk"],
+["〖枭瀚软件合集〗","蓝奏云","https://lanzoux.com/s/lixiaohan"],
+["〖宝藏基地〗","蓝奏云","https://mrj.lanzouj.com/s/rjkm"],
+["〖火云分享库〗","蓝奏云","https://hyrjk6.lanzoui.com/b00f5v42d"],
+["〖安康资源网〗","蓝奏云","https://lanzoui.com/b0084g00j"],
+["〖微笑资源网〗","蓝奏云","https://wxfx.lanzouo.com/s/wxfx"],
+["〖软件园〗","蓝奏云","https://rjy.lanzoux.com/s/RJY"],
+["〖线报坊软件合集〗","蓝奏云","https://www.lanzoui.com/b60364"],
+["〖BS资源合集〗","蓝奏云","https://www.lanzoui.com/b93256"],
+["〖安惠购资源屋〗","蓝奏云","https://pan.lanzoui.com/b174576/"],
+["〖hai资源屋〗","蓝奏云","https://pan.lanzoui.com/b221497/"],
+["〖乐分享〗","蓝奏云","https://pan.lanzoui.com/b215476/"],
+["〖无名软件站〗","蓝奏云","https://pan.lanzoui.com/b206983/"],
+["〖口令专享〗","蓝奏云","https://pan.lanzoui.com/b240011/"],
+["〖允晨资源〗","蓝奏云","https://pan.lanzoui.com/b54212/"],
+["〖电视盒子〗","蓝奏云","https://pan.lanzoui.com/b167839/"],
+["〖北笙资源屋〗","蓝奏云","https://www.lanzoui.com/b003fkotc"],
+["〖清风资源屋〗","蓝奏云","https://pan.lanzoui.com/b60564/"],
+["〖阿友软件网〗","蓝奏云","https://pan.lanzoui.com/u/aybaba"],
+["〖小鹏资源网〗","蓝奏云","https://www.lanzoui.com/u/xiaopengi"],
+["〖Hj合集站〗","蓝奏云","https://www.lanzoui.com/b66477/"],
+["〖牛之家〗","蓝奏云","https://www.lanzoui.com/u/memedawq"],
+["〖星辰资源网〗","蓝奏云","https://www.lanzoui.com/u/azsoft"],
+["〖七月资源〗","蓝奏云","https://www.lanzoui.com/b196932/"],
+["〖zhuai67资源〗","蓝奏云","https://www.lanzoui.com/u/%E6%8B%BD%E6%8B%BD"],
+["〖爱码科技〗","蓝奏云","https://wws.lanzouy.com/b02dmrfgb/"],
+["〖辉少资源网〗","蓝奏云","https://hstd.lanzoux.com/s/8866/"],
+];
+
+</script>
+<script type='text/javascript'>
+//绅士列表
+var ht_slb=[
+["〖梓澪の妙妙屋〗能进去就算了，进不去就用魔法软件","绅士网站","https://zi0.cc/"],
+["〖老王资源部落〗可能要魔法软件","绅士网站","https://www.laowang2222.com"],
+["〖擼擼社〗版本：8.35.09887d207，免广告，解锁会员","绅士软件","https://wwp.lanzouo.com/tp/iIMbw1qmi3xe"],
+["〖学习资料网〗可能要魔法软件","绅士网站","https://pixeldrain.com/d/xBg1FPmX"],
+["〖H版-宝可梦迷之规则〗版本1.0，资源大小：864M","绅士游戏","https://m.mhxywk.com/go/110246.html"],
+["〖雪色任务〗资源版本：1.0，资源大小：148M","绅士游戏","https://app.3dmgame.com/android/292812.html"],
+["〖House Chores〗家务游戏，无汉化，资源版本：0.5.2.1，资源大小：377M","绅士游戏","https://m.xiazaii.com/game/17800.html"],
+["〖HypnoApp〗资源版本：1.1.0，资源大小：361M","绅士游戏","https://app.3dmgame.com/android/359430.html"],
+["〖神代伊月的选举战安〗资源版本：1.0，资源大小：989M","绅士游戏","http://m.52miji.com/sy/457124.html"],
+["〖女仆LIFE〗资源版本：2.0，资源大小：682","绅士游戏","http://m.52miji.com/sy/458408.html"],
+["〖我是猫女仆喵〗资源版本：1，资源大小：39","绅士游戏","http://m.52miji.com/sy/457774.html"],
+["〖暮光庄园〗资源版本：13，资源大小：597","绅士游戏","http://m.52miji.com/sy/456978.html"],
+["〖库资源〗密码：flp7","绅士资源","https://wwxg.lanzoub.com/b01w1x52f"],
+["〖哆啦A梦世界〗资源版本：0.8，资源大小：144M","绅士游戏","https://m.28283.com/game/531594.html"],
+["〖巷子里的秘密事情/URJJ〗资源版本：1.12，资源大小：119M","绅士游戏","http://m.52miji.com/sy/519354.html"],
+["〖恶魔少女奈西雅〗资源版本：1.0，资源大小：1.25G","绅士游戏","http://m.52miji.com/sy/458246.html"],
+["〖dicegame〗资源版本：1.0，资源大小：32M","绅士游戏","http://m.52miji.com/sy/457691.html"],
+["〖测试病毒〗密码：bfks，版本号：5.7.1，只是名字是这个，但是并不是病毒，是故意弄这个名字的","绅士软件","https://wwxg.lanzoub.com/iWXHD0lqmp5a"],
+];
+</script>
+<script type='text/javascript'>
+//主列表
+var ht_zsj=[
+["〖交流群〗欢迎您加入这个交流群，一起学习交流吧！","官方推荐","https://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=ix5KnNgJWUaO0RwmlTd6g_nKaVl-9R1g&authKey=490FHwiRNQln0D%2FFiCNXeDfo8K7iLS1qZOBGS8QAOOG%2BjIOurBCpgDwGd4Hou9WM&noverify=0&group_code=529646109"],
+["〖赞助支持〗请多多支持！资源收集不易！","官方推荐","http://shp.qpic.cn/collector/1991271828/3af2ad4a-498d-4096-bbc8-ff4c5d8d9cc9/0"],
+["〖原神恶搞文〗崩铁或者原神恶搞聊天文本，复制生成信息，然后粘贴到聊天框里即可。","娱乐工具","https://wmcs520.github.io/qt/eg.html"],
+["〖图片网〗一个简单的二次元图片网页。","娱乐工具","https://wmcs520.github.io/qt/tpw.html"],
+["〖Gitee〗国内程序员交流学习平台","学习平台","https://search.gitee.com/?skin=rec&type=repository&q="],
+["〖Github〗国外程序员交流学习平台，需要魔法软件才能打开","学习平台","https://github.com"],
+["〖W3学校网〗网站开发以及java语言的学习平台","学习平台","http://www.w3school.com.cn"],
+["〖吾爱破解〗一个古老的安全技术学习平台","学习平台","https://www.52pojie.cn/"],
+["〖菜鸟工具〗","学习平台","https://www.runoob.com/"],
+["〖 JAVA学习屋 〗顾名思义就是JAVA编程语言的学习平台","学习平台","https://how2j.cn/"],
+["〖MT论坛〗一个新晋的安全技术学习平台","学习平台","https://bbs.binmt.cc/forum.php?mod=guide&view=hot&mobile=2"],
+["〖PS教程大合集〗","资源仓库","https://www.aliyundrive.com/s/EJcsUh31URV/folder/638b1d9e0220d060493242c5af874043a7f8e618"],
+["〖ChatGPT资源〗","资源仓库","https://www.aliyundrive.com/s/w7Nyp7zp5Br"],
+["〖1TB超大库〗","资源仓库","https://www.wenshushu.cn/box/2y9xxjki7c8"],
+["〖APP百宝箱〗","资源仓库","https://flowus.cn/youxiaohou/share/5b37c342-ecf0-48da-b5d3-f50933109d89"],
+["〖奇异社区〗","软件分享","https://qiyi.ee/"],
+["〖CAD教程〗","资源仓库","https://www.aliyundrive.com/s/c9qJbENfoaZ/folder/638b1f9d86956bce298a41bcb75830e642d75c31"],
+["〖站长工具〗","工具网站","https://mtool.chinaz.com/"],
+["〖CTF在线工具〗","工具网站","http://www.hiencode.com/"],
+["〖接码科技〗","接码平台","http://www.shejiinn.com/"],
+["〖信息查询〗","工具网站","https://fofa.info/"],
+["〖快柠檬〗密码：927v，链接打不开的用这个魔法软件才能打开","VPN","https://wwd.lanpv.com/icV8Y1odt2oj"],
+];
+</script>
+<script type='text/javascript'>
+//隐私政策
+var yszc='<h3>隐私政策</h3>更新日期：2023年6月6日，生效日期：2023年6月6日，使用说明：请您在使用前，仔细阅读并充分理解本隐私政策的全部内容。一旦您使用或继续使用，即表示您同意我们按照本隐私政策使用和处理。若您不同意本隐私政策，请立即停止使用！<br/><br/><h3>政策目录</h3>1.引言，2.关于我们，3.本政策如何更新，4.如何联系我们，5.争议解决<br/><br/>一、引言∶我们可能会不时依据法律法规或业务调整对本隐私政策进行修订。当本隐私政策发生变更后，我们会在版本更新后通过在显著位置提示或推送通知、消息等形式向您告知此政策有所更新。<br/>用户违反本协议或相关的服务条款的规定，我们有权视用户的行为性质采取包括但不限于中断使用许可、停止提供服务、限制使用、法律追究等措施。同时，我们会视司法部门的要求，协助调查。<br/>仅限用于学习交流，若用户用于任何违法违规行为，用户违反约定，导致任何第三方损害的，用户应当独立承担全部责任，我们因此遭受损失的，用户也应当一并赔偿。<br/>使用涉及到互联网服务因素，可能会受到各个环节不稳定因素的影响，存在因不可抗力、计算机病毒、黑客攻击、系统不稳定、用户所在位置、用户关机以及其他任何网络、技术、通信线路等原因造成的服务中断或不能满足用户要求的风险，用户须明白并自行承担以上风险。在适用法律允许的最大范围内，我们在任何情况下不就因使用或不能使用及所发生的特殊的、意外的、非直接或间接的损失承担赔偿责任，即使用户已事先向我们告知该损害发生的可能性。<br/><br/>二、关于我们∶由无名传世阁（以下称“我们”）研发，且提供产品运营和服务。<br/><br/>三、本政策如何更新∶隐私政策可能会有变更。为了给您提供更好的服务，我会根据产品的更新情况及法律法规的相关要求更新本《隐私政策》的条款，该等更新构成本《隐私政策》的一部分。我们会在您登录及版本更新时以推送通知、弹窗的形式向您展示变更后的指引。请您注意，只有在您在使用时，我们才会收集、使用、存储您的个人信息数据。且不会用于任何违法违规行为。<br/><br/>四、如何联系我们<br/>当您有其他的投诉、建议、未成年人个人信息相关问题时，您均可以通过如下任意方式与我们取得联系：<br/>1.您可以在"关于"功能内提示的作者邮箱，发送邮件与作者取得联系！<br/>2.您也可以在"关于"功能内提示的交流群与我们团队取得联系！<br/>3.我们会在收到您的意见及建议后，并在验证您的用户身份后的15个工作日内尽快向您回复。<br/><br/>此外，您理解并知悉，在与个人信息有关的如下情形下，我们将无法回复您的请求：<br/>1.与国家安全、国防安全直接相关的。<br/>2.与公共安全、公共卫生、重大公共利益直接相关的。<br/>3.与犯罪侦查、起诉、审判和判决执行等直接相关的。<br/>4.有充分证据表明您存在主观恶意或滥用权利的。<br/>5.响应您的请求将导致您或其他个人、组织的合法权益受到严重损害的。<br/>6.涉及商业秘密的。<br/>7.法律法规等规定的其他情形。<br/><br/>五、争议解决∶本政策应根据中华人民共和国法律解释与管辖，有关于您和我们之间发生的任何形式的争议均应友好协商解决。<br/><br/>';
+</script>
+<script type='text/javascript'>
+var jzsmy='<h3>页面说明</h3>不要看下载页显示的大小。要看实际下载的文件的大小，如果上面显示的是233MB，但是下载的文件是563MB，可以差个5MB左右，但是不能差太多，那么这个就是有用的。下面的资源大小就是资源的真实大小，只要进行对比一下就知道了。';
+</script>
+<script type='text/javascript'>
+//主列表
+var szs=ht_zsj.length;
+//蓝奏云列表
+var szs2=ht_lzy.length;
+//绅士列表
+var szs3=ht_lzy.length;
+//主调用
+function IsPhone() {var info = navigator.userAgent;
+return /Mobile/i.test(info);}
+if (IsPhone()) {//移动端
+document.getElementById('ydbj').style.display="block";
+document.getElementById('pcbj').style.display="none";
+yd_lb();
+} else {//PC端
+document.getElementById('pcbj').style.display="block";
+document.getElementById('ydbj').style.display="none";
+pc_lb();
+}
+
+//初始化列表
+function yd_lb(){
+document.getElementById('yd_xjs').innerHTML=yszc;
+document.getElementById('ydlb').innerHTML="";
+for(var g=0;g< szs;g++) {
+document.getElementById('ydlb').innerHTML=document.getElementById('ydlb').innerHTML+'<a href="'+ht_zsj[g][2]+'"><div class="yd_lbnr">^'+ht_zsj[g][1]+'^<br/>'+ht_zsj[g][0]+'</div></a>';}
+}
+function pc_lb(){
+document.getElementById('pc_xjs').innerHTML=yszc;
+document.getElementById('pclb').innerHTML="";
+for(var g=0;g<szs;g++){
+document.getElementById('pclb').innerHTML=document.getElementById('pclb').innerHTML+'<a href="'+ht_zsj[g][2]+'"><div class="pc_lbnr">^'+ht_zsj[g][1]+'^<br/>'+ht_zsj[g][0]+'</div></a>';}
+}
+//蓝奏云列表
+function yd_lb_lzy(){
+document.getElementById('yd_xjs').innerHTML=yszc;
+document.getElementById('ydlb').innerHTML="";
+for(var g=0;g< szs2;g++) {
+document.getElementById('ydlb').innerHTML=document.getElementById('ydlb').innerHTML+'<a href="'+ht_lzy[g][2]+'"><div class="yd_lbnr">^'+ht_lzy[g][1]+'^<br/>'+ht_lzy[g][0]+'</div></a>';}
+}
+function pc_lb_lzy(){
+document.getElementById('pc_xjs').innerHTML=yszc;
+document.getElementById('pclb').innerHTML="";
+for(var g=0;g<szs2;g++){
+document.getElementById('pclb').innerHTML=document.getElementById('pclb').innerHTML+'<a href="'+ht_lzy[g][2]+'"><div class="pc_lbnr">^'+ht_lzy[g][1]+'^<br/>'+ht_lzy[g][0]+'</div></a>';}
+}
+//绅士列表
+function yd_lb_s(){
+document.getElementById('yd_xjs').innerHTML=jzsmy;
+document.getElementById('ydlb').innerHTML="";
+for(var g=0;g< szs3;g++) {
+document.getElementById('ydlb').innerHTML=document.getElementById('ydlb').innerHTML+'<a href="'+ht_slb[g][2]+'"><div class="yd_lbnr">^'+ht_slb[g][1]+'^<br/>'+ht_slb[g][0]+'</div></a>';}
+}
+function pc_lb_s(){
+document.getElementById('pc_xjs').innerHTML=jzsmy;
+document.getElementById('pclb').innerHTML="";
+for(var g=0;g<szs3;g++){
+document.getElementById('pclb').innerHTML=document.getElementById('pclb').innerHTML+'<a href="'+ht_slb[g][2]+'"><div class="pc_lbnr">^'+ht_slb[g][1]+'^<br/>'+ht_slb[g][0]+'</div></a>';}
+}
+</script>
+<script src="yinghua.js"></script>
+</html>
