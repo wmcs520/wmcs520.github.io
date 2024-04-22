@@ -1,529 +1,189 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <title>hi</title>
-    <dtnk rel="icon" href="http://p.qlogo.cn/gh/377973736/377973736/640/">
-        <meta name="viewport"
-            content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
-        <style>
-            * {
-                padding: 0;
-                margin: 0;
-            }
-
-            body {
-                background-size: 100% 100%;
-                background-attachment: fixed;
-                background-image: url("http://shp.qpic.cn/collector/1991271828/153a9af9-e1a4-4602-9345-e797b8de1085/0");  
-                font-family: serif;
-                font-size: 16px;
-                color: #444;
-            }
-
-            p {
-                font-size: 10px;
-            }
-
-            a {
-                color: #666;
-               /* text-decoration: none; */
-                font-size: 16px;
-                -webkit-tap-highlight-color: #fff;
--webkit-user-select: none;
--moz-user-focus: none;
--moz-user-select: none;
-            }
-            a:focus{outline:none;}
-            
-.wm_xt{
-color:#555;
-}
-.wm_xt::-webkit-scrollbar-track {
-background-color:#fff;
-}
-.wm_xt::-webkit-scrollbar {
-width:0;
-}
-.wm_xt::-webkit-scrollbar-thumb {
-background-color:#eee;
-}
-
-
-
-            .box {
-                width: 100%;
-                height: 100%;
-                position: fixed;
-                margin: auto;
-            }
-
-            .btl {
-                background-color: rgba(255, 255, 255, 1);
-                width: 100%;
-                display: flex;
-                align-items: center;
-                height: 8%;
-                margin: auto;
-                box-shadow: 0px 1px 2px #eee;
-            }
-
-            .btl2 {
-                width: 88px;
-                display: flex;
-                align-items: center;
-                height: 100%;
-            }
-
-            .btl_img {
-                width: 30px;
-                height: 30px;
-                display: flex;
-                align-items: center;
-                margin: auto;
-                border-radius: 100%;
-            }
-
-            .img {
-                width: 100%;
-                height: 100%;
-                border-radius: 100%;
-                box-shadow: 0px 1px 2px #eee;
-            }
-
-            .nr {
-                background-color: rgba(255, 255, 255, 0.2);
-                width: 100%;
-                height: 92%;
-                overflow: auto;
-            }
-
-            .nrgq {
-                display: flex;
-            }
-
-            .btl_img2 {
-                position:relative;
-                left:0;top:0;bottom:0;right:0;
-                margin:auto;
-                flex: 1;
-                border-radius: 5px;
-                height: 200px;
-                margin: 10px;
-                box-shadow: 0px 0px 4px #fff;
-        
-                background-color: rgba(255, 255, 255, 1);
-            }
-            
-            .btl_img3{
-                position:absolute;
-                left:0;top:0;bottom:0;right:0;
-                margin:auto;
-                box-shadow:0 0 2px 6px #fff inset;
-           }
-
-            .img2 {
-                width: 100%;
-                height: 100%;
-                border-radius: 5px;
-            }
-
-            .botton {
-                box-shadow: 0px 0px 4px #fff;
-                flex: 1;
-                border-radius: 5px;
-                margin: 10px;
-                padding: 1%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: rgba(255, 255, 255, 1);
-            }
-
-            .botton:active {
-                color: #fff;
-                background-color: #888;
-                box-shadow: 0px 0px 4px #222;
-            }
-
-            .botton2 {
-                flex: 1;
-                border-radius: 5px;
-                margin: 10px;
-                padding: 1%;
-            }
-
-            .music {
-                background-color: rgba(255, 255, 255, 1);
-                border-radius: 5px;
-                flex: 1;
-                padding: 5px;
-                margin: 10px;
-                display: flex;
-                display: flex;
-                align-items: center;
-                box-shadow: 0px 0px 4px #fff;
-            }
-
-            .music_img {
-                border-radius: 5px;
-                width: 60px;
-                height: 60px;
-            }
-
-            .music:active {
-                background-color: #999;
-                background-color: #888;
-                box-shadow: 0px 0px 4px #222;
-                color: #fff;
-            }
-
-            .music2 {
-                flex: 1;
-                padding: 5px;
-                margin: 10px;
-            }
-
-            .xx {
-                width: 100%;
-                margin: 10px;
-                flex: 1;
-            }
-
-            .nrgq2 {
-                display: flex;
-                width: 100%;
-            }
-
-            .ctmjg {
-                height: 10px;
-            }
-
-            .gn2s {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .az_button {
-                box-shadow: 0px 0px 4px #fff;
-                width: 30%;
-                border-radius: 5px;
-                margin: 10px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: rgba(255, 255, 255, 1);
-                font-size: 15px;
-                height: 40px;
-            }
-
-            .az_button:active {
-                box-shadow: 0px 0px 4px #222;
-                color: #fff;
-                background-color: #999;
-                background-color: #888;
-                box-shadow: 0px 0px 4px #222;
-            }
-
-            .botton2 {
-                flex: 1;
-                border-radius: 5px;
-                margin: 10px;
-                padding: 1%;
-            }
-
-            .music {
-                background-color: rgba(255, 255, 255, 1);
-                border-radius: 5px;
-                flex: 1;
-                margin: 10px;
-                display: flex;
-                display: flex;
-                align-items: center;
-                box-shadow: 0px 0px 4px #fff;
-            }
-
-            .az_button2 {
-                height: 40px;
-                font-size: 15px;
-                box-shadow: 0px 0px 4px #fff;
-                width: 70%;
-                border-radius: 15px;
-                margin: 10px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: rgba(255, 255, 255, 1);
-            }
-
-            input {
-                border-radius: 5px;
-                padding-left: 2%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                height: 100%;
-                flex: 1;
-                border: none;
-                font-size: 15px;
-                outline: none;
-                border: solid 1.1px #fff;
-            }
-
-            .pc_gnsq {
-                width: 70%;
-                margin: auto;
-            }
-        </style>
-</head>
-
-<body>
-    <div class="box">
-        <audio id="ayer" loop="true" />
-        <source src="https://api.uomg.com/api/rand.music?sort=热歌榜">
-        </source></audio>
-        <!--标题栏-->
-        <div class="btl">
-            <div class="btl2">
-                <div class="btl_img">
-                    <img class="img" src="http://p.qlogo.cn/gh/126659902/126659902/640/" />
-                </div>
-            </div>
-            <h3 id="wzbt">团团の音</h3>
-        </div>
-        <!--内容区开始标签-->
-        <div class="nr">
-            <div class="ctmjg"></div>
-            <!--内容广告区-->
-            <div class="nrgq" id="gq">
-
-            </div>
-            <!--功能搜索-->
-            <div id="pc_gnsq"></div>
-            <!--选择功能区-->
-            <div class="gnkb" id="gnq"></div>
-            <!--列表显示区-->
-            <div id="music">
-
-
-
-            </div>
-            <!--内容结束标签-->
-        </div>
-    </div>
-</body>
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>无影资源屋</title><link rel="icon" href="http://p.qlogo.cn/gh/377973736/377973736/640/"><meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0"><style>*{padding:0;margin:0;}body{outline:none;font-family:serif;color:#000;background-size:100% 100%;background-attachment:fixed;background-image:url("https://shp.qpic.cn/collector/1991271828/2abf3310-50a7-46e8-b727-e123993dfc5e/0");}.box{width:100%;height:100%;position:fixed;margin:auto;}.bt{width:100%;height:8%;background-color:rgba(255,255,255,0.9);display:flex;align-items:center;box-shadow: 0px 0px 1px 2px #eee;}.nr{width:100%;height:85%;display:flex;display:flex;align-items:center;justify-content:center;}.ts{padding:1%;margin:1%;box-shadow: 0px 0px 1px 2px #eee;background-color:rgba(255,255,255,0.6);border-radius:5px;margin:auto;width:93%;display:flex;align-items:center;justify-content:center;font-size:10px;}.bt2{width:100px;height:100%;display:flex;align-items:center;justify-content:center;}.bt3{width:30px;height:30px;display:flex;background-color:#fff;align-items:center;justify-content:center;border-radius:100%;box-shadow: 0px 0px 1px 2px #ddd;}.nr_lb1{box-shadow: 0px 0px 1px 2px #eee;overflow:auto;width:35%;height:96%;background-color:rgba(255,255,255,0.6);margin:1%;border-radius:5px;overflow:auto;}.nr_lb2{box-shadow: 0px 0px 1px 2px #eee;width:58%;height:96%;background-color:rgba(255,255,255,0.6);margin:1%;border-radius:5px;overflow:auto;}.lb{background-color:rgba(255,255,255,0.6);padding:2%;margin:2%;border-radius:5px;border: solid 2px #eee;display:flex;align-items:center;justify-content:center;}.lb:active{color:#fff;border: solid 2px #ccc;background-color:rgba(2,2,2,0.6);}.lb2{background-color:rgba(255,255,255,0.6);padding:2%;margin:2%;border-radius:5px;border: solid 2px #eee;display:flex;align-items:center;}.lb2:active{color:#fff;border: solid 2px #ccc;background-color:rgba(2,2,2,0.6);}a{-webkit-tap-highlight-color:rgba(0,0,0,0);border:none;outline:none;text-decoration:none;color:#000;}a:focus{outline:none;}@keyframes move{from{transform: rotate(0deg); }to{transform: rotate(360deg);}}.nr_lb1::-webkit-scrollbar{width:0;}.nr_lb2::-webkit-scrollbar{width:0;}img{width:100%;height:100%;background-size:100% 100%;background-attachment:fixed;border-radius:100px;}.musi{flex:1;display:flex;flex-direction:row-reverse;padding-right:15px;}.music{width:35px;height:35px;display:flex;align-items:center;justify-content:center;border-radius:100%;}
+</style></head><body><audio id="ayer" loop="true"/><source src="https://api.uomg.com/api/rand.music?sort=热歌榜"></source></audio><div class="box"><div class="bt"><div class="bt2"><div class="bt3"><img src="http://p.qlogo.cn/gh/529646109/529646109/640/"/></div></div><b>无影资源屋</b><div class="musi"><div class="music"><img id="music" onclick='music()' src="http://shp.qpic.cn/collector/1991271828/7eb68da5-88d0-4515-9f0e-2a4c5500049a/0"/></div></div></div>
+<div class="nr"><div class="nr_lb1">
+<div class="lb" onclick='lbxs("tQuStfQtt3zZtoFk");'>官方信息</div>
+<div class="lb" onclick='lbxs("tfXYt7qmtTRFtTzL");'>无影商城</div>
+<div class="lb" onclick='lbxs("tQqdt3dYt7dntSzl");'>学习平台</div>
+<div class="lb" onclick='lbxs("uHLWtQR4t3gN");'>蓝奏资源</div>
+<div class="lb" onclick='lbxs("tvqNtujTtSaFt3g+");'>网站分享</div>
+<div class="lb" onclick='lbxs("tog5tS/Et7XctSRr");'>抓包工具</div>
+<div class="lb" onclick='lbxs("u3qkt3jqtQuHtSRo");'>软件安全</div>
+<div class="lb" onclick='lbxs("uQqPt+LUu3qkt3jq");'>魔法软件</div>
+<div class="lb" onclick='lbxs("tTC7tQqMu3RDt+gM");'>君子资源</div>
+<div class="lb" onclick='lbxs("tfduuGLxMPb=");'>智能AI</div>
+<div class="lb" onclick='lbxs("u3qkt3jqtSaFt3g+");'>软件分享</div>
+<div class="lb" onclick='lbxs("tuOztS/uu3qkt3jq");'>社区软件</div>
+<div class="lb" onclick='lbxs("tQamt3dMtvqNtujT");'>娱乐网站</div>
+<div class="lb" onclick='lbxs("tSRqt3jRu3RDt+gM");'>其他资源</div>
+</div><div class="nr_lb2" id="lbjg"></div></div><div class="ts">- 最近修改时间：2024年04月10日 -</div></div></body>
 <script type="text/javascript">
-/*弹窗自定义*/
-let wm_csxd=0;
-function wm_tcxskz(){
-var wm_oInput = document.createElement('div');
-wm_oInput.innerHTML='<div id="tckzy" style="width:100%;height:100%;position:fixed;display:flex;align-items:center;justify-content:center;bottom:0;top:0;left:0;right:0;margin:auto;flex-direction:column;background-color:rgba(255,255,255,0.9);display:none;"><div style="width:220px;height:240px;border: solid 3px #ccc;border-radius:3px;position:absolute;bottom:0;top:0;left:0;right:0;margin:auto;display:flex;flex-direction:column;background-color:#fff;"><div class="wm_xt" style="padding:5px;height:20px;text-align:center;color:#555;font-weight:bold;overflow:auto;" id="wm_tc_bt">温馨提示</div><div style="height:2px;width:100%;background-color:#eee;"></div><div class="wm_xt" style="overflow:auto;flex:1;padding:12px;color:#555;" id="wm_tc_nr">暂无内容</div><div style="height:2px;width:100%;background-color:#eee;"></div><div style="letter-spacing:2px;padding:3px;height:20px;text-align:center;display:flex;flex-direction:row-reverse;margin:3px;color:#555;font-weight:bold;font-size:14px;overflow:auto;" onclick="wm_gbtc();">关闭弹窗</div></div></div>';document.body.appendChild(wm_oInput);}
-function wm_gbtc(){
-if(wm_csxd==1){
-document.getElementById("tckzy").style.display="none";
-wm_csxd=0;
-}else if(wm_csxd==0){
-document.getElementById("tckzy").style.display="block";
-wm_csxd=1;}
-}
-wm_tcxskz();
-var wm_tc_bt=document.getElementById("wm_tc_bt");
-var wm_tc_nr=document.getElementById("wm_tc_nr");
-wm_tc_bt.innerHTML="网站公告";
-wm_tc_nr.innerHTML="系统很懒啥也不想说。所以暂时没有任何公告！";
-   wm_gbtc();
-</script>
-<script type="text/javascript">
-    /*功能列表数据*/
-    var gnlb = [
-        ["- 关于团团 -", "gylq();"],
-        ["- 全部歌曲 -", "music_2s('专属','普通');"],
-        ["- 粉丝专属 -", "music_2s('粉丝','普通');"],
-        ["- 舰长专属 -", "music_2s('舰长','普通');"],
-        ["- 提督专属 -", "music_2s('提督','普通');"],
-    ];
-    
-    /*图片后台*/
-    var img_url1="https://img.xjh.me/random_img.php?return=302&";
-
-    /*粉丝专属*/
-    var music_whqf = [
-    ["星光降落", "陆雨萱 / 粉丝专属", "https://music.163.com/song/media/outer/url?id=2050661659", "粉丝专属"],
-        ["人生态度", "王七七 / 提督专属", "https://music.163.com/song/media/outer/url?id=2010046622", "提督专属"],
-        ["美丽的神话", "成龙 / 舰长专属", "https://music.163.com/song/media/outer/url?id=4875127", "舰长专属"],
-["青鸟衔风", "三无MarBlue / 粉丝专属", "https://music.163.com/song/media/outer/url?id=2010046622", "粉丝专属"],
-    ];
-
-    var w = window.innerWidth;
-    var h = window.innerHeight;
-    var gnsz = gnlb.length;
-    var ydlb = 2; var pclb = 5;
-    var music_2s2 = "";
-    var music_2s2_id = 0;
-    var musi = music_whqf.length;
-</script>
-<script type="text/javascript">
-    /*音乐播放*/
-    function music(id) {
-        //alert("正在播放"+music_whqf[id][0]);
-
-        var url = music_whqf[id][2];
-        document.getElementById("ayer").src = url;
-        document.getElementById("ayer").play();
-    }
-
-
-
-    if (w > 999) {
-
-        /*广告图片*/
-        for (var v = 0; v < 4; v++) {
-            var url = "https://img.xjh.me/random_img.php?return=302&" + Math.random() * 100; document.getElementById("gq").innerHTML = document.getElementById("gq").innerHTML + '<div class="btl_img2"><div class="btl_img3"><img class="img2" src="' + url + '"/></div><div class="btl_img3"></div></div>';
-        }
-
-        /*添加搜索功能*/
-        document.getElementById("gnq").innerHTML = document.getElementById("gnq").innerHTML + '<div class="gn2s" id="gn2s"><div class="az_button" onclick="higeqs();">歌曲搜索</div><div class="az_button2"><input type="text" id="gqs" placeholder="请输入搜索内容"/></div></div>';
-
-        /*功能列表*/
-        var lbsy = gnsz % pclb; var lbs = parseInt(gnsz / pclb); var szx = 0;
-        for (var gh = 0; gh < lbs; gh++) {
-            document.getElementById("gnq").innerHTML = document.getElementById("gnq").innerHTML + '<div class="nrgq"><div onclick="' + gnlb[szx + 0][1] + '" class="botton">' + gnlb[szx + 0][0] + '</div><div onclick="' + gnlb[szx + 1][1] + '" class="botton">' + gnlb[szx + 1][0] + '</div><div onclick="' + gnlb[szx + 2][1] + '" class="botton">' + gnlb[szx + 2][0] + '</div><div onclick="' + gnlb[szx + 3][1] + '" class="botton">' + gnlb[szx + 3][0] + '</div><div onclick="' + gnlb[szx + 4][1] + '" class="botton">' + gnlb[szx + 4][0] + '</div></div>'; szx = szx + 5;
-        }
-        /*添加剩下的功能列表*/
-        if (lbsy == 1) {
-            document.getElementById("gnq").innerHTML = document.getElementById("gnq").innerHTML + '<div class="nrgq"><div onclick="' + gnlb[szx + 0][1] + '" class="botton">' + gnlb[szx + 0][0] + '</div><div class="botton2"></div><div class="botton2"></div><div class="botton2"></div><div class="botton2"></div></div>'; szx = szx + 1;
-        } else if (lbsy == 2) {
-            document.getElementById("gnq").innerHTML = document.getElementById("gnq").innerHTML + '<div class="nrgq"><div onclick="' + gnlb[szx + 0][1] + '" class="botton">' + gnlb[szx + 0][0] + '</div><div onclick="' + gnlb[szx + 1][1] + '" class="botton">' + gnlb[szx + 1][0] + '</div><div class="botton2"></div><div class="botton2"></div><div class="botton2"></div></div>'; szx = szx + 2;
-        } else if (lbsy == 3) {
-            document.getElementById("gnq").innerHTML = document.getElementById("gnq").innerHTML + '<div class="nrgq"><div onclick="' + gnlb[szx + 0][1] + '" class="botton">' + gnlb[szx + 0][0] + '</div><div onclick="' + gnlb[szx + 1][1] + '" class="botton">' + gnlb[szx + 1][0] + '</div><div onclick="' + gnlb[szx + 2][1] + '" class="botton">' + gnlb[szx + 2][0] + '</div><div class="botton2"></div><div class="botton2"></div></div>'; szx = szx + 3;
-        } else if (lbsy == 4) {
-            document.getElementById("gnq").innerHTML = document.getElementById("gnq").innerHTML + '<div class="nrgq"><div onclick="' + gnlb[szx + 0][1] + '" class="botton">' + gnlb[szx + 0][0] + '</div><div onclick="' + gnlb[szx + 1][1] + '" class="botton">' + gnlb[szx + 1][0] + '</div><div onclick="' + gnlb[szx + 2][1] + '" class="botton">' + gnlb[szx + 2][0] + '</div><div onclick="' + gnlb[szx + 3][1] + '" class="botton">' + gnlb[szx + 3][0] + '</div><div class="botton2"></div></div>'; szx = szx + 4;
-        }
-
-        /*添加音乐列表*/
-        var lbsy0 = musi % 3; var lbs0 = parseInt(musi / 3); var szx0 = 0;
-        for (var ngm = 0; ngm < lbs0; ngm++) {
-            var szx1 = szx0 + 1; var szx2 = szx0 + 2;
-            document.getElementById("music").innerHTML = document.getElementById("music").innerHTML + '<div class="nrgq2"><div onclick="music(' + szx0 + ')" class="music"><div class="music_img"><img class="img2" src="http://shp.qpic.cn/collector/1991271828/2254851d-6120-49a5-b415-e682d2804cd7/0"/></div><div class="xx"><h3>' + music_whqf[szx0][0] + '</h3><p>-- ' + music_whqf[szx0][1] + '</p></div></div><div onclick="music(' + szx1 + ')" class="music"><div class="music_img"><img class="img2" src="http://shp.qpic.cn/collector/1991271828/2254851d-6120-49a5-b415-e682d2804cd7/0"/></div><div class="xx"><h3>' + music_whqf[szx0 + 1][0] + '</h3><p>-- ' + music_whqf[szx0 + 1][1] + '</p></div></div><div onclick="music(' + szx2 + ')" class="music"><div class="music_img"><img class="img2" src="http://shp.qpic.cn/collector/1991271828/2254851d-6120-49a5-b415-e682d2804cd7/0"/></div><div class="xx"><h3>' + music_whqf[szx0 + 2][0] + '</h3><p>-- ' + music_whqf[szx0 + 2][1] + '</p></div></div></div>'; szx0 = szx0 + 3;
-        }
-        /*添加音乐列表剩下的*/
-        if (lbsy0 == 1) {
-            document.getElementById("music").innerHTML = document.getElementById("music").innerHTML + '<div class="nrgq2"><div onclick="music(' + szx0 + ')" class="music"><div class="music_img"><img class="img2" src="http://shp.qpic.cn/collector/1991271828/2254851d-6120-49a5-b415-e682d2804cd7/0"/></div><div class="xx"><h3>' + music_whqf[szx0][0] + '</h3><p>-- ' + music_whqf[szx0][1] + '</p></div></div><div class="music2"></div><div class="music2"></div></div>'; szx0 = szx0 + 1;
-        } else if (lbsy0 == 2) {
-            var szx1 = szx0 + 1;
-            document.getElementById("music").innerHTML = document.getElementById("music").innerHTML + '<div class="nrgq2"><div class="music" onclick="music(' + szx0 + ')"><div class="music_img"><img class="img2" src="http://shp.qpic.cn/collector/1991271828/2254851d-6120-49a5-b415-e682d2804cd7/0"/></div><div class="xx"><h3>' + music_whqf[szx0][0] + '</h3><p>-- ' + music_whqf[szx0][1] + '</p></div></div><div onclick="music(' + szx1 + ')" class="music"><div class="music_img"><img class="img2" src="http://shp.qpic.cn/collector/1991271828/2254851d-6120-49a5-b415-e682d2804cd7/0"/></div><div class="xx"><h3>' + music_whqf[szx0 + 1][0] + '</h3><p>-- ' + music_whqf[szx0 + 1][1] + '</p></div></div><div class="music2"></div></div>'; szx0 = szx0 + 2;
-        }
-
-
-    } else if (w < 999 || w > 0) {
-   
-        /*广告图片*/
-        for (var v = 0; v < 1; v++) {
-            var url3 = "https://img.xjh.me/random_img.php?return=302&" + Math.random() * 100;
-            document.getElementById("gq").innerHTML = document.getElementById("gq").innerHTML + '<div class="btl_img2"><div class="btl_img3"><img class="img2" src="' + url3 + '"/></div><div class="btl_img3"></div></div>';
-        }
-        
-        /*添加搜索功能*/
-        document.getElementById("gnq").innerHTML = document.getElementById("gnq").innerHTML + '<div class="gn2s" id="gn2s"><div class="az_button" onclick="higeqs();">歌曲搜索</div><div class="az_button2"><input type="text" id="gqs" placeholder="请输入搜索内容..."/></div></div>';
-
-        /*功能列表*/
-        var lbsy = gnsz % ydlb; var lbs = parseInt(gnsz / ydlb); var szx = 0;
-        for (var gh = 0; gh < lbs; gh++) {
-            document.getElementById("gnq").innerHTML = document.getElementById("gnq").innerHTML + '<div class="nrgq"><div onclick="' + gnlb[szx + 0][1] + '" class="botton">' + gnlb[szx + 0][0] + '</div><div onclick="' + gnlb[szx + 1][1] + '"class="botton">' + gnlb[szx + 1][0] + '</div></div>'; szx = szx + 2;
-        }
-        /*添加剩下的功能列表*/
-        if (lbsy == 1) {
-            document.getElementById("gnq").innerHTML = document.getElementById("gnq").innerHTML + '<div class="nrgq"><div onclick="' + gnlb[szx + 0][1] + '" class="botton">' + gnlb[szx + 0][0] + '</div><div class="botton2"></div></div>'; szx = szx + 1;
-        }
-
-        /*音乐列表数据*/
-        for (var mu = 0; mu < musi; mu++) {
-            var url4 = music_whqf[mu][2]; document.getElementById("music").innerHTML = document.getElementById("music").innerHTML + '<div onclick="music(' + mu + ');" class="music"><div class="music_img"><img class="img2" src="http://shp.qpic.cn/collector/1991271828/2254851d-6120-49a5-b415-e682d2804cd7/0"/></div><div class="xx"><h3>' + music_whqf[mu][0] + '</h3><p>-- ' + music_whqf[mu][1] + '</p></div></div>';
-        }
-
-    }
-
-
-</script>
-<script type="text/javascript">
-    /*歌曲搜索*/
-    function music_2s(string, string2) {
-        document.getElementById("music").innerHTML = "";
-        music_2s2 = "";
-        if (string2.search('普通') != -1) {
-            for (var kl = 0; kl < musi; kl++) {
-                if (music_whqf[kl][3].search(string) != -1) {
-                    music_2s2 = music_2s2 + kl + ",";
-                    music_2s2_id++;
-                }
-            }
-        } else if (string2.search('搜索') != -1) {
-            for (var kl = 0; kl < musi; kl++) {
-                if (music_whqf[kl][0].search(string) != -1) {
-                    music_2s2 = music_2s2 + kl + ",";
-                    music_2s2_id++;
-                }
-            }
-        }
-
-        var stringArr = music_2s2.split(",");
-        var jsl = stringArr.length - 1;
-
-        if (w > 999) {
-
-            /*添加音乐列表*/
-            var lbsy01 = jsl % 3;
-            var lbs01 = parseInt(jsl / 3); var szx01 = 0;
-
-            for (var ngm = 0; ngm < lbs01; ngm++) {
-                var mu2 = parseInt(stringArr[szx01]);
-                var mu3 = parseInt(stringArr[szx01 + 1]);
-                var mu4 = parseInt(stringArr[szx01 + 2]);
-                document.getElementById("music").innerHTML = document.getElementById("music").innerHTML + '<div class="nrgq2"><div onclick="music(' + mu2 + ')" class="music"><div class="music_img"><img class="img2" src="http://shp.qpic.cn/collector/1991271828/2254851d-6120-49a5-b415-e682d2804cd7/0"/></div><div class="xx"><h3>' + music_whqf[mu2][0] + '</h3><p>-- ' + music_whqf[mu2][1] + '</p></div></div><div onclick="music(' + mu3 + ')" class="music"><div class="music_img"><img class="img2" src="http://shp.qpic.cn/collector/1991271828/2254851d-6120-49a5-b415-e682d2804cd7/0"/></div><div class="xx"><h3>' + music_whqf[mu3][0] + '</h3><p>-- ' + music_whqf[mu3][1] + '</p></div></div><div onclick="music(' + mu4 + ')" class="music"><div class="music_img"><img class="img2" src="http://shp.qpic.cn/collector/1991271828/2254851d-6120-49a5-b415-e682d2804cd7/0"/></div><div class="xx"><h3>' + music_whqf[mu4][0] + '</h3><p>-- ' + music_whqf[mu4][1] + '</p></div></div></div>'; szx01 = szx01 + 3;
-            }
-
-            /*添加音乐列表剩下的*/
-            if (lbsy0 == 1) {
-                var mu20 = parseInt(stringArr[szx01]);
-                document.getElementById("music").innerHTML = document.getElementById("music").innerHTML + '<div class="nrgq2"><div onclick="music(' + mu20 + ')" class="music"><div class="music_img"><img class="img2" src="http://shp.qpic.cn/collector/1991271828/2254851d-6120-49a5-b415-e682d2804cd7/0"/></div><div class="xx"><h3>' + music_whqf[mu20][0] + '</h3><p>-- ' + music_whqf[mu20][1] + '</p></div></div><div class="music2"></div><div class="music2"></div></div>'; szx01 = szx01 + 1;
-            } else if (lbsy0 == 2) {
-                var mu21 = parseInt(stringArr[szx01]);
-                var mu30 = parseInt(stringArr[szx01 + 1]);
-                document.getElementById("music").innerHTML = document.getElementById("music").innerHTML + '<div class="nrgq2"><div class="music" onclick="music(' + mu21 + ')"><div class="music_img"><img class="img2" src="http://shp.qpic.cn/collector/1991271828/2254851d-6120-49a5-b415-e682d2804cd7/0"/></div><div class="xx"><h3>' + music_whqf[mu21][0] + '</h3><p>-- ' + music_whqf[mu21][1] + '</p></div></div><div onclick="music(' + mu3 + ')" class="music"><div class="music_img"><img class="img2" src="http://shp.qpic.cn/collector/1991271828/2254851d-6120-49a5-b415-e682d2804cd7/0"/></div><div class="xx"><h3>' + music_whqf[mu30][0] + '</h3><p>-- ' + music_whqf[mu30][1] + '</p></div></div><div class="music2"></div></div>'; szx01 = szx01 + 2;
-            }
-
-        } else if (w < 999 || w > 0) {
-            /*音乐列表数据*/
-            for (var mu = 0; mu < jsl; mu++) {
-                var mu20 = parseInt(stringArr[mu]);
-                document.getElementById("music").innerHTML = document.getElementById("music").innerHTML + '<div onclick="music(' + mu20 + ');" class="music"><div class="music_img"><img class="img2" src="http://shp.qpic.cn/collector/1991271828/2254851d-6120-49a5-b415-e682d2804cd7/0"/></div><div class="xx"><h3>' + music_whqf[mu20][0] + '</h3><p>-- ' + music_whqf[mu20][1] + '</p></div></div>';
-            }
-        }
-
-    }
-    /*歌曲搜索*/
-    function higeqs() {
-        var gqsx = document.getElementById("gqs").value;
-        if (gqsx.length == 0) {
-wm_tc_bt.innerHTML="温馨提示";
-wm_tc_nr.innerHTML="|ω・）你都没输入搜索内容，怎么能搜索到东西？快输入搜索内容！";
-document.getElementById("gqs").placeholder="在这里输入内容！！！";
-   wm_gbtc();
-        } else if (gqsx.length > 0) { music_2s(gqsx, '搜索'); }
-    }
-    
-     /*关于主播*/
-    function gylq() {
-    wm_tc_bt.innerHTML='关于团团小芯';
-wm_tc_nr.innerHTML='直播平台：哔哩哔哩<br/>直播间：<a href="https://m.bilibili.com/">暂无</a><br/>QQ群：<a href="https://m.bilibili.com/">126659902</a><br/>个人主页：<a href="https://b23.tv/Y25E0Bv">点击打开</a><br/>请多多支持呀！';
-   wm_gbtc();
-    }
-</script>
-<script type="text/javascript">
-
-</script>
-<script src="https://wmcs520.github.io/yinghua.js"></script>
-</html>
+var htda=[
+["官方信息","# QQ交流群<br/>有问题加本群！欢迎您加入这个交流群，一起学习交流吧！","Q2NeV2Ju3/xm7OtmVOt97qekSqWf3RHf7axm7OxmV9x8WrSxJ5A/K/T+4RcsKPij5dWIUpUZ5nBOWqphUFMqTpxjOqER7CetP9E0HdEpWFZ3T6bxK1blNbZrQUHLPRmjJDMcJbTFQPKLRFUDTdwsOnWf5EJmVUf4MbW5LEEB5ex2H5HCQbc4W6HCMrB0N2W2T1NG7rPtUeed7dxqT6HfT0bxJCT0VdxpVEx97qNc45P/L5SeK9DlLM=="],
+["官方信息","# 赞助支持<br/>请多多支持！资源收集不易！","Q2NeV1ok3rKoVCtmVFc93dKj3qKk7FmcSrNkVawmL5bmJ9VmL1Gs3qDrK5UcT5bp3RStJnSiK1StTapaTFNZ3RDlTdMqK9MrS5J/Jawl"],
+["官方信息","# 网站公告<br/>对网页有问题请看这个！","Q2NeV2Ju3/xr7RKnK5Gl3dWfWFZpSatf7/xmWCxrXdVjQ2Ni7A=="],
+["官方信息","# 工具下载教程<br/>保姆教程，如果不会下载的，请看这个教程文件！！！","Q2NeV2Ju3/xr7RKnK5Gl3dWfWFZpSatf7/xmWCxhX0csXatoWFph"],
+["官方信息","# 无名资源<br/>蓝奏云，密码：6666","Q2NeV2Ju3/xrWqMj7FEjV2SjSqxi3qGlJ6ZqX9JqTY=="],
+["官方信息","# 网站搭建教程<br/>如果你想搭建和本网站一样的网站的话，可以看看这个教程哦~","Q2NeV2Ju3/xnQFE/TRKoSRcj30Em3dKk7OwnSRKaJ9PtSdSlJnAmS9SpTdTdT9H9KFMsSnDmSdJmJl=="],
+["官方信息","# 群文件安装教程<br/>不会安装群文件？看看这个教程吧！","Q2NeV2Ju3/xnQFE/TRKoSRcj30Em3dKk7OwtS9DeT1beS9K9J1MsSnMrSnBZKRPtK1PsJqDrKRMqKM=="],
+["列表","数据","tSaFtvjD"],
+["学习平台","# Gitee<br/>国内程序员交流学习网站！","Q2NeV2Ju3/xnTRE/SqYjTqceTRPjSqxi3nxnQqcj46HcS/TeX6Bc46HcVFxnQ6NkV0bdV5e="],
+["学习平台","# Github<br/>国外程序员交流学习网站，需要魔法软件才能打开本网站！","Q2NeV2Ju3/x0Q6NoWRGjSqxi"],
+["学习平台","# W3学校网<br/>网站开发以及java语言的学习网站","Q2NeV1ok3rWrW/trJrK9QFxk7Ct97qejSqs="],
+["学习平台","# 吾爱破解<br/>一个古老的安全技术学习网站","Q2NeV2Ju3/xrWrVjK5Hl7qffTOt97aw="],
+["学习平台","# 哔哩哔哩<br/>一个既是学习也是娱乐的网站！","Q2NeV2Ju3/xi3dHf7FcaQRmf3dKk7M=="],
+["学习平台","# 菜鸟工具<br/>也是一个网站开发以及JAVA语言的学习网站","Q2NeV2Ju3/xrWrVjV0Uj7qxa3dKk7Ow="],
+["列表","数据","tSaFtvjD"],
+["蓝奏云","# 工具下载教程<br/>保姆教程，如果不会下载的，请看这个教程文件！！！","Q2NeV2Ju3/xr7RKnK5Gl3dWfWFZpSatf7/xmWCxhX0csXatoWFph"],
+["蓝奏云","# 孤煞软件库<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWqej7FEjXdxpSat97qekS9AeV5M/S9Ec3l=="],
+["蓝奏云","# 大肥软件库<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xlSRsj7FEjXdxpVCt97qekWOxmQREjX2UjLA=="],
+["蓝奏云","# 苏念资源库<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xnQ2PiJOthSRtu7rUh3dKk7Oxn3pKoWPtHSRs="],
+["蓝奏云","# 蜗牛资源<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVj7FEjXdxpSat97qekV/xrT2WcTdTdVdVk"],
+["蓝奏云","# 兜兜软件<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVj7FEjXdxpSat97qekS9DnJnYeJOw="],
+["蓝奏云","# 实用软件库<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xfSqc9J1SlKCthSRtu7rU+3dKk7OxaJFNuQ5brQdJ="],
+["蓝奏云","# Bbjs分享屋<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVj7FEjXdxpQOt97qekS9ApJrZeK2T03l=="],
+["蓝奏云","# 小G资源库<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVj7FEjXdxpSat97qekS9BcVFU0X2ff3l=="],
+["蓝奏云","# 小晨软件合集<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrZh3dmZ70fkWRljSqxi3rJkSqKbTA=="],
+["蓝奏云","# 爱分享<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVj7FEjXdxpQOt97qekS9J/K5MrJA=="],
+["蓝奏云","# 无名软件库<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xhSRtu7rUf3dKk7Oxp3rHgQl=="],
+["蓝奏云","# 暖分享<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xjWREj3dmZ70fkW6YjSqxi3qGlJ5WtJrfmQA=="],
+["蓝奏云","# 资源鼠<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xuX6Jj7FEjXdxpQOt97qekV/xuXRe="],
+["蓝奏云","# 智仙的大裤子<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xuQFcsQREjXdctWREj3dmZ70fkWRbjSqxi3qGlJRZjK6MsQY=="],
+["蓝奏云","# 奇怪的分享<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVj7FEjXdxpQOt97qekS9AmS9AmQ1cZ"],
+["蓝奏云","# 分享轩<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xlSRsj7FEjXdxpQOt97qekS9SnKnVm3l=="],
+["蓝奏云","# 软件实验室<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xlSRsj7FEjXdxpQOt97qekWOxtTrNm"],
+["蓝奏云","# 小轩VIP软件合集<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVj7FEjXdxpQOt97qekS9VqL1Gq"],
+["蓝奏云","# chudali资源站<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVj7FEjXdxpXCt97qekWOx9Q2UbSRmf"],
+["蓝奏云","# 游戏修改基地<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xlSRsj7FEjXdxpQOt97qekS9YsL1YsKl=="],
+["蓝奏云","# 黑科技玩机<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVj7FEjXdxpSat97qekS9GsJ5YpLCw="],
+["蓝奏云","# 月亮软件库<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVj7FEjXdxpSat97qekS9AqSdKbW5K03l=="],
+["蓝奏云","# 小说漫画库<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xdTRt0VqZc70Yj7FEjXdxpTat97qekS9BcWdEl75No"],
+["蓝奏云","# 00资源库<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xmQ6UiV/thSRtu7rUs3dKk7OxaJFKeS0EtKRb="],
+["蓝奏云","# yoyodadada库<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVj7FEjXdxpXCt97qekWOxt7rckTFEbSRNZ"],
+["蓝奏云","# 无名工具库<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVj7FEjXdxpW/t97qekS9A/JFwlK6Tf4rVm"],
+["蓝奏云","# 小默资源库<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xlSRsj7FEjXdxpQOt97qekS9Y/L1AsKM=="],
+["蓝奏云","# 百万软件库<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/x/Qdlq3dmZ70fkW6bjSqxi3rJkS0W+"],
+["蓝奏云","# 巅峰-南泽软件库<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xjSRtuTOthSRtu7rUm3dKk7Oxn3qtZ70fc"],
+["蓝奏云","# 影视软件库<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xdTRt0VqZc70Yj7FEjXdxpTat97qekS9BcWdElQ0Nc"],
+["蓝奏云","# 小高软件基地<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xsQREkTqEk3dmZ70fkWRejSqxi3qGlSrTnVFP/TA=="],
+["蓝奏云","# 苏轩软件库<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xnW6ZpSRsj7FEjXdxpTat97qekWOxBHPPsH5ZCH5ZFHPPsHPHDHPDt"],
+["蓝奏云","# 霖淘购网库<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVj7FEjXdxpQOt97qekS9GpJ9JrJA=="],
+["蓝奏云","# 软件修改基地<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVj7FEjXdxpQOt97qekS9B9LFM/WFP="],
+["蓝奏云","# 应用猫<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/x/Q0NtKathSRtu7rUk3dKk7OxaJ1Un7dK/Vqo="],
+["蓝奏云","# 小葵资源库<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xsQnSj7FEjXdxpW/t97qekV/xuXFh="],
+["蓝奏云","# 枭瀚软件合集<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xhSRtu7rUs3dKk7Oxn3qmfXFcZ7qZZ7Y=="],
+["蓝奏云","# 宝藏基地<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xiVdoj7FEjXdxpQat97qekV/x/Qdii"],
+["蓝奏云","# 火云分享库<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xoX6HgQnSj7FEjXdxpQOt97qekS9AlT9UqK1Hb"],
+["蓝奏云","# 安康资源网<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xhSRtu7rUf3dKk7OxaJ1AsKFVlJFo="],
+["蓝奏云","# 微笑资源网<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrXFTs3dmZ70fkWRwjSqxi3rJkWrZdXA=="],
+["蓝奏云","# 软件园<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/x/Q0bj7FEjXdxpXCt97qekV/xOOcb="],
+["蓝奏云","# 线报坊软件合集<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVj7FEjXdxpQOt97qekS9SlJnSe"],
+["蓝奏云","# BS资源合集<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVj7FEjXdxpQOt97qekS9bnJ9Pq"],
+["蓝奏云","# 安惠购资源屋<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xlSRsj7FEjXdxpQOt97qekS9DrK1PrKaw="],
+["蓝奏云","# hai资源屋<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xlSRsj7FEjXdxpQOt97qekS9G/J5MtK/w="],
+["蓝奏云","# 乐分享<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xlSRsj7FEjXdxpQOt97qekS9GmK5MrKaw="],
+["蓝奏云","# 无名软件站<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xlSRsj7FEjXdxpQOt97qekS9GlK9bsJ/w="],
+["蓝奏云","# 口令专享<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xlSRsj7FEjXdxpQOt97qekS9GeJ1AmJOw="],
+["蓝奏云","# 允晨资源<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xlSRsj7FEjXdxpQOt97qekS9PeJ9D/3l=="],
+["蓝奏云","# 电视盒子<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xlSRsj7FEjXdxpQOt97qekS9DqKnYnLOw="],
+["蓝奏云","# 北笙资源屋<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVj7FEjXdxpQOt97qekS9AlJqT+7rN9"],
+["蓝奏云","# 清风资源屋<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xlSRsj7FEjXdxpQOt97qekS9SlK5Se3l=="],
+["蓝奏云","# 阿友软件网<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xlSRsj7FEjXdxpQOt97qekWOxZXRHZSdD="],
+["蓝奏云","# 小鹏资源网<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVj7FEjXdxpQOt97qekWOxsQREkVFUjTqb="],
+["蓝奏云","# Hj合集站<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVj7FEjXdxpQOt97qekS9SqK1Vr3l=="],
+["蓝奏云","# 牛之家<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVj7FEjXdxpQOt97qekWOxiTRpcTFErVM=="],
+["蓝奏云","# 星辰资源网<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVj7FEjXdxpQOt97qekWOxZX0KkT0M="],
+["蓝奏云","# 七月资源<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVj7FEjXdxpQOt97qekS9DtK9bnJaw="],
+["蓝奏云","# zhuai67资源<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVj7FEjXdxpQOt97qekWOwcN5ScLDGcMbMcN5ScLDGcMbM="],
+["蓝奏云","# 爱码科技<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrJj7FEjXdxpXOt97qekS9A/TFp/TdWa3l=="],
+["蓝奏云","# 辉少资源网<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xoVrNb3dmZ70fkW6YjSqxi3rJkL1YqKaw="],
+["列表","数据","tSaFtvjD"],
+["君子资源","# 梓澪の妙妙屋<br/>网站，能进去就算了，进不去就用魔法软件","Q2NeV2Ju3/xuQ5AjSqJk"],
+["君子资源","# 软件资料网<br/>网站，里面分享了大量的绅士软件，可能要魔法软件，并且下载也要魔法软件","Q2NeV2Ju3/xlQ6Zc7FN/SRcj3dKk7Oxb3rZCTnEFPFpS"],
+["君子资源","# 老王资源部落<br/>网站，里面有大量的绅士游戏，可能要魔法软件，并且资源下载比较麻烦。","Q2NeV2Ju3/xrWrVj7FEkWqEjTnG/J9GjSqxi"],
+["君子资源","# H版-宝可梦迷之规则<br/>游戏，版本1.0，资源大小：864M","Q2NeV2Ju3/xi3dpoX2crQ/t97qekTqwkJ5DlJ9Mq3dZe7Rl="],
+["君子资源","# 雪色任务<br/>游戏，资源版本：1.0，资源大小：148M","Q2NeV2Ju3/xZV2AjJqNiTqEiTOt97qekSRtbVdxfTCw/L5GsJ5GjQ2Ni7A=="],
+["君子资源","# House Chores<br/>游戏，家务游戏，无汉化，资源版本：0.5.2.1，资源大小：377M","Q2NeV2Ju3/xi30ZfS6fZQRbjSqxi3qWZ7RPkJ5VsJ1AjQ2Ni7A=="],
+["君子资源","# HypnoApp<br/>游戏，资源版本：1.1.0，资源大小：361M","Q2NeV2Ju3/xZV2AjJqNiTqEiTOt97qekSRtbVdxfTCwnK5beJnAjQ2Ni7A=="],
+["君子资源","# 神代伊月的选举战安<br/>游戏，资源版本：1.0，资源大小：989M","Q2NeV1ok3qejK5HiQRff3dKk7OxnXOweK5VmJ9MjQ2Ni7A=="],
+["君子资源","# 女仆LIFE<br/>游戏，资源版本：2.0，资源大小：682","Q2NeV1ok3qejK5HiQRff3dKk7OxnXOweK5YeJ1YjQ2Ni7A=="],
+["君子资源","# 我是猫女仆喵<br/>游戏，资源版本：1，资源大小：39","Q2NeV1ok3qejK5HiQRff3dKk7OxnXOweK5VrKnMjQ2Ni7A=="],
+["君子资源","# 暮光庄园<br/>游戏，资源版本：13，资源大小：597","Q2NeV1ok3qejK5HiQRff3dKk7OxnXOweK5StKnYjQ2Ni7A=="],
+["君子资源","# 库资源<br/>小资源库，密码：flp7","tvjEtQL+u3RDt+gM"],
+["君子资源","# 哆啦A梦世界<br/>游戏，资源版本：0.8，资源大小：144M","Q2NeV2Ju3/xi39GsJ9Yn3dKk7Ox0SRpc3nPnJ5PtKCtoWFph"],
+["君子资源","# 巷子里的秘密事情/URJJ<br/>游戏，资源版本：1.12，资源大小：119M","Q2NeV1ok3qejK5HiQRff3dKk7OxnXOwpJ5bnK5MjQ2Ni7A=="],
+["君子资源","# 恶魔少女奈西雅<br/>游戏，资源版本：1.0，资源大小：1.25G","Q2NeV1ok3qejK5HiQRff3dKk7OxnXOweK5Y/K1SjQ2Ni7A=="],
+["君子资源","# dicegame<br/>资源版本：1.0，资源大小：32M","Q2NeV1ok3qejK5HiQRff3dKk7OxnXOweK5VqL5DjQ2Ni7A=="],
+["君子资源","# 测试病毒<br/>软件，密码：bfks，版本号：5.7.1，只是名字是这个，但是并不是病毒，是故意弄这个名字的","Q2NeV2Ju3/xrWrZ03dmZ70fkWRGjSqxi3qc6RDZDJFmm76ApSM=="],
+["列表","数据","tSaFtvjD"],
+["网站分享","# 吾爱工具包<br/>修改，抓包，逆向工具","Q2NeV2Ju3/xb7rWj39P/VFxgQRPjSqskUFxk72Jk"],
+["网站分享","# steam<br/>一个国际的游戏下载平台。看设备，有的可能要魔法软件，或者加速器，有的不用。","Q2NeV2Ju3/xoTRml30KeTREiVFxrT6HcTCt97qekXdYiSqsk"],
+["网站分享","# 内网穿透<br/>内网穿透工具网站。","Q2NeV2Ju3/xrWrVj7RUdV0AjSqxi3l=="],
+["网站分享","# 工具军刀<br/>工具网站，包涵很多工具。","Q2NeV2Ju3/xfWCpe7qxhV/teTRKo3l=="],
+["网站分享","# 趣盘搜<br/>网盘资源搜索网站！","Q2NeV2Ju3/xlSRsjT0Uj7FUeWOt97qe="],
+["网站分享","# 69书吧<br/>小说网站，全部免费！","Q2NeV2Ju3/wqL6KoWOtjT6M="],
+["网站分享","# 飞速中文网<br/>小说网站，全部免费！","Q2NeV2Ju3/xi3dTcQ6KsV/t97qek"],
+["网站分享","# 站长工具<br/>网站工具","Q2NeV2Ju3/xiWFxk7Ct9QFcjS6ojSqxi3l=="],
+["网站分享","# CTF在线工具<br/>网站工具","Q2NeV1ok3rWrW/toQRUjSqxbTOt97qek"],
+["网站分享","# 接码科技<br/>顾名思义，接码网站，国外手机号。","Q2NeV1ok3rWrW/tnQFUgQRcj7at97qek"],
+["网站分享","# 信息查询<br/>查询信息的工具网站","Q2NeV2Ju3/xd7qTZ3dcjTdwk"],
+["列表","数据","tSaFtvjD"],
+["魔法软件","# 工具下载教程<br/>保姆教程，如果不会下载的，请看这个教程文件！！！","Q2NeV2Ju3/xr7RKnK5Gl3dWfWFZpSatf7/xmWCxhX0csXatoWFph"],
+["魔法软件","# 快柠檬<br/>vpn软件，密码：927v，备注：未修改！会员时间没了就去设置里清空数据，然后在进去即可！","Q2NeV2Ju3/xrWqMj7FEjV2SjSqxi3qc9U9ZTJRxbW1HkQY=="],
+["魔法软件","# 起飞<br/>vpn软件，提取码：zw8Z，解压码wmcsg。下载次数没了，提醒作者即可。","Q2NeV2Ju3/x9SRctWRsjJ5Jt3dKk7Oxi3qbyJ2YpMemjRUAlQPiEPY=="],
+["列表","数据","tSaFtvjD"],
+["抓包工具","# 工具下载教程<br/>保姆教程，如果不会下载的，请看这个教程文件！！！","Q2NeV2Ju3/xr7RKnK5Gl3dWfWFZpSatf7/xmWCxhX0csXatoWFph"],
+["抓包工具","# HttpCanary（小黄鸟）<br/>安卓端抓包工具软件，密码:dwbq，下载地址：蓝奏云盘，备注：如果用手机下载，请看上面的工具下载教程！！！","Q2NeV2Ju3/xrWqMj7FEjXdxpTOt97qekQ5NNPDlmW2PnQ0N9"],
+["抓包工具","# 皇冠鸟<br/>安卓端抓包工具软件，密码:7hse，下载地址：蓝奏云盘，备注：如果用手机下载，请看上面的工具下载教程！！！","Q2NeV2Ju3/xrWqMj7FEjXdxpTOt97qekQ5NTWPbmW2UaKqmZ"],
+["抓包工具","# Wireshark<br/>PC端抓包工具软件，下载地址：移动云盘，提取码：CJaQ","Q2NeV2Ju3/x9SRctWRsjJ5Jt3dKk7Oxi3qbyJ2YpMelnVnWKJ1VsMl=="],
+["抓包工具","# 小蓝鸟<br/>安卓端抓包工具软件，密码:1vf0，下载地址：蓝奏云盘，备注：如果用手机下载，请看上面的工具下载教程！！！","Q2NeV2Ju3/xrWqMj7FEjXdxpTOt97qekQ5BGWFomW2UcTncZ"],
+["列表","数据","tSaFtvjD"],
+["软件安全","# 360加固<br/>软件加固网站，用于加固软件，适合软件开发者。","Q2NeV2Ju3/xgQRE0WOsnK9AjSqsk"],
+["软件安全","# 腾讯御安全<br/>软件加固网站，用于加固软件，适合软件开发者。","Q2NeV2Ju3/x97FxpTCteTRt9TRte3dKk7OxlVdxbWRKe3qpn"],
+["软件安全","# 梆梆加固<br/>软件加固网站，用于加固软件，适合软件开发者。","Q2NeV2Ju3/xbT6SjSdEjTqKhTOt97qek"],
+["软件安全","# 百度加固<br/>软件加固网站，用于加固软件，适合软件开发者。","Q2NeV2Ju3/xZVFilVdxeTRKe3dHZQRNp3dKk7Ow="],
+["软件安全","# 爱加密<br/>软件加固网站，用于加固软件，适合软件开发者。","Q2NeV2Ju3/xrWrVjQRffSRpf3dKj3l=="],
+["软件安全","# 网易易盾<br/>软件加固网站，用于加固软件，适合软件开发者。","Q2NeV2Ju3/xi3dNp7asmK9JjSqxi3l=="],
+["软件安全","# Virbox<br/>软件加固网站，用于加固软件，适合软件开发者。","Q2NeV2Ju3/xnQFUh7CtqQ6Ha7rYjSqxi3l=="],
+["软件安全","# 乐变加固<br/>软件加固网站，用于加固软件，适合软件开发者。","Q2NeV2Ju3/xrWrVj7FxqTRxeSOt97qek"],
+["软件安全","# 启明星辰<br/>软件加固网站，用于加固软件，适合软件开发者。","Q2NeV2Ju3/xrWrVjWdUjW6KeTRKo3dKk7Ot97axjT6W8W2clTOxtXREmQdWlWCw="],
+["列表","数据","tSaFtvjD"],
+["无影商城","# 无影神剑会员<br/>无影神剑的永久会员，这东西是啥懂的都懂，联系客服购买<br/>价格为：90￥","Gl=="],
+["无影商城","# 热血社工<br/>社工库，数据为60G，这东西是啥懂的都懂，联系客服购买<br/>价格为：1300￥","Gl=="],
+["无影商城","# 某游源码<br/>游戏源码，数据为500G，这东西是啥懂的都懂，联系客服购买<br/>价格为：10000￥","Gl=="],
+["列表","数据","tSaFtvjD"],
+["智能AI","# 海螺问问<br/>网站，可自行百度下载软件","Q2NeV2Ju3/xoSRchWRxZQOt97qe="],
+["智能AI","# 天工<br/>天工AI的下载地址。","Q2NeV2Ju3/xo7qpc30NfSRt07qt03dKj3qNkWqth7qEbNrUfTFPyV6H97qNcN0Hk75poKPmf7dh="],
+["智能AI","# 讯飞星火<br/>讯飞星火AI的下载地址。","Q2NeV2Ju3/xsQRt0Q2Uk30ZdX6Uj3dKj3l=="],
+["智能AI","# 万卷<br/>万卷AI的下载地址。","Q2NeV2Ju3/xrSRtgWREj3dpcVdUfWFYjSqxi3l=="],
+["列表","数据","tSaFtvjD"],
+["软件分享","# 橘漫（ju漫）<br/>橘漫的下载地址（蓝奏云网盘），在腾讯视频，爱奇艺，哔哩哔哩里面需要会员才能看的动漫，在这里可以免费观看！","Q2NeV2Ju3/xrWrEq3dmZ70fkW6MjSqxi3rJkQ0UiSRs="],
+["软件分享","# Telegram<br/>国外交流学习平台社区软件的下载地址。需要魔法软件才能打开网站下载。","Q2NeV2Ju3/xeTRmcTrHZ7OtkVdVk"],
+["软件分享","# 阅读<br/>有比较多小说的软件，而且免费无广告，如果没有比较好的小说软件，可以看看这个软件！","Q2NeV2Ju3/xnQFE/TRKoSRcj30Em3dKk7OwrT5YlSdDpKncZSqJ/J1blJ5VtTFG/J9UdJRMrS9DsTA=="],
+["列表","数据","tSaFtvjD"],
+["社区软件","# 奇妙应用<br/>安卓端软件社区，自行下载，里面有很多还不错的资源。有破解游戏还有破解软件，还有一些违规的资源，123云盘链接","Q2NeV2Ju3/xrWrVjJ5GnVFEj3dKk7Oxn3qcuNEKRWapd5qi6MOtoWFph"],
+["社区软件","# 奇异社区<br/>安卓端软件社区，自行下载，里面有些还不错的资源。","Q2NeV2Ju3/xmQ6cf3dUc3l=="],
+["社区软件","# 7723游戏盒<br/>安卓端软件社区，自行下载，里面有破解游戏还有破解软件。","Q2NeV1ok3nVrJ9JjSqxi"],
+["社区软件","# 葫芦侠<br/>安卓端软件社区，有些还不错的破解资源。","Q2NeV2Ju3/xrS6AjQ2UhW6ZfSOt97qe="],
+["列表","数据","tSaFtvjD"],
+["其他资源","# PS教程大合集<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVjSRmfX6UjT2HfWdPjSqxi3rJkNPf9VpUoJnEUPcSkTdxhTFU/3nSnLFGmT1ccJ1G/JFMlK9AeL5J/K1H9KREdL1VeJ1MnS5WdLFPqJ5Y="],
+["其他资源","# ChatGPT资源<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVjSRmfX6UjT2HfWdPjSqxi3rJkWnWLX6ArX0ApM0G="],
+["其他资源","# 1TB超大库<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVjWqUjVqZpVqZp3dKj3qHkXCw/X5csXFf+Q5W9LA=="],
+["其他资源","# APP百宝箱<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xd7FxrW6JjSqskXRxpXFcZ7qZkWOxnQFE/TOwpS9JrSnJeJapcSqSl35MsTFDiS9UbJ/pdK5AtJnJmJ1cbL1b="],
+["其他资源","# 抖音网页版<br/>抖音网页版。","Q2NeV2Ju3/xrWrVjTFxpXRcj3dKk7OwyQ6K8T0Hk7Uxi7qHf7FU8QFxiT5emH0HcSqxi7RUjT1em"],
+["其他资源","# CAD教程<br/>这玩意暂时没啥可介绍的。","Q2NeV2Ju3/xrWrVjSRmfX6UjT2HfWdPjSqxi3rJkSncmOdHE5dTkSUokTdxhTFU/3nSnLFGmT9cbL1StK5TaSqP/L5ZZK1EaSqGrK5YnJFPqK1HbKnU9JnD="],
+["列表","数据","tSaFtvjD"],
+["娱乐网站","# 魔方栈<br/>魔方练习网站。","Q2NeV2Ju3/xr7RKnK5Gl3dWfWFZpSatf7/xi7qTu3l=="],
+["娱乐网站","# 2048小游戏<br/>2048的小游戏网页哦∽","Q2NeV2Ju3/xr76fmX6ojTqceQ2Ua3dck3qDkJ9AeLCw="],
+["娱乐网站","# 简易计算器<br/>顾名思义，就是计算器。","Q2NeV2Ju3/xr76fmX6ojTqceQ2Ua3dck3qD="],
+["娱乐网站","# 记忆寄存器<br/>就是锻炼脑子的小游戏","Q2NeV2Ju3/xr76fmX6ojTqceQ2Ua3dck3qDkW2BsSrZtXCw="],
+["娱乐网站","# 青蛙吃苍蝇<br/>青蛙吃苍蝇小游戏，兼容移动端与pc端","Q2NeV2Ju3/xr76fmX6ojTqceQ2Ua3dck3qDkV6W9QFKt3l=="],
+["娱乐网站","# 兔子3d飞行<br/>小兔子乖乖，把门儿开开！","Q2NeV2Ju3/xr76fmX6ojTqceQ2Ua3dck3qDkW2onTFTs3l=="],
+["娱乐网站","# 图片网<br/>一个简单的二次元图片网页。","Q2NeV2Ju3/xr7RKnK5Gl3dWfWFZpSatf7/xmWCxeV2VjQ2Ni7A=="],
+["娱乐网站","# 原神恶搞文<br/>崩铁或者原神恶搞聊天文本，复制生成信息，然后粘贴到聊天框里即可。","Q2NeV2Ju3/xr7RKnK5Gl3dWfWFZpSatf7/xmWCxcT/toWFph"],
+["列表","数据","tSaFtvjD"],
+];
+var hihi={_keyStr:"ABC1DEF2GHI3JKL4MNO5PUR6STQ7VWX8YZa9bcd0ofg+hijklm/nepqrstuvwxzy=",encode:function(e){var t="";var n,r,i,s,o,u,a;var f=0;e=hihi._utf8_encode(e);while(f<e.length){n=e.charCodeAt(f++);r=e.charCodeAt(f++);i=e.charCodeAt(f++);s=n>>2;o=(n&3)<<4|r>>4;u=(r&15)<<2|i>>6;a=i&63;if(isNaN(r)){u=a=64}else if(isNaN(i)){a=64}t=t+this._keyStr.charAt(s)+this._keyStr.charAt(o)+this._keyStr.charAt(u)+this._keyStr.charAt(a)}return t},jm2:function(e){var t="";var n,r,i;var s,o,u,a;var f=0;e=e.replace(/[^A-Za-z0-9+/=]/g,"");while(f<e.length){s=this._keyStr.indexOf(e.charAt(f++));o=this._keyStr.indexOf(e.charAt(f++));u=this._keyStr.indexOf(e.charAt(f++));a=this._keyStr.indexOf(e.charAt(f++));n=s<<2|o>>4;r=(o&15)<<4|u>>2;i=(u&3)<<6|a;t=t+String.fromCharCode(n);if(u!=64){t=t+String.fromCharCode(r)}if(a!=64){t=t+String.fromCharCode(i)}}t=hihi._utf8_jm2(t);return t},_utf8_encode:function(e){e=e.replace(/rn/g,"n");var t="";for(var n=0;n<e.length;n++){var r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r)}else if(r>127&&r<2048){t+=String.fromCharCode(r>>6|192);t+=String.fromCharCode(r&63|128)}else{t+=String.fromCharCode(r>>12|224);t+=String.fromCharCode(r>>6&63|128);t+=String.fromCharCode(r&63|128)}}return t},_utf8_jm2:function(e){var t="";var n=0;var r=c1=c2=0;while(n<e.length){r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r);n++}else if(r>191&&r<224){c2=e.charCodeAt(n+1);t+=String.fromCharCode((r&31)<<6|c2&63);n+=2}else{c2=e.charCodeAt(n+1);c3=e.charCodeAt(n+2);t+=String.fromCharCode((r&15)<<12|(c2&63)<<6|c3&63);n+=3}}return t}}
+var szs=htda.length;var muid=0;
+var ayer=document.getElementById('ayer');
+function music(){document.getElementById('music').src="http://shp.qpic.cn/collector/1991271828/22def8dc-ce27-4de5-a9bf-bb4b4cb633fc/0";if(muid==0){ayer.play();muid=1;}else{document.getElementById('music').src="http://shp.qpic.cn/collector/1991271828/7eb68da5-88d0-4515-9f0e-2a4c5500049a/0";muid=0;ayer.pause();}}function lbxs(string){document.getElementById('lbjg').innerHTML="";for(var g=0;g<szs;g++){if(htda[g][0]==hihi.jm2(string)){document.getElementById('lbjg').innerHTML=document.getElementById('lbjg').innerHTML+'<a href="'+hihi.jm2(htda[g][2])+'"><div class="lb2">'+htda[g][1]+'</div></a>';}}}lbxs("tQuStfQtt3zZtoFk");
+</script><script src="https://wmcs520.github.io/qt/zhuy.js"></script></html>
